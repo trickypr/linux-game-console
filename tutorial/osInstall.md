@@ -55,8 +55,4 @@ Click yes and continue on the usage of grub. Then you need to select the drive y
 
 Finally you are done with the installation and you can continue on to setting up the GUI.
 
-<div align="center">
-
 [Window manager setup →](./tutorial/wmSetup.md)
-
-</div>
