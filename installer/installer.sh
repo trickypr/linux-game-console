@@ -29,7 +29,5 @@ info 'Adding awesomewm config.'
 info 'This will overwrite existing files'
 echo
 
-cd /etc/xdg/awesome
-
-sudo rm rc.lua
-sudo cp -a /tmp/linuxGameConsoleMaster/linux-game-console-master/assortedResorces/awesome ./
+sudo rm /etc/xdg/awesome/rc.lua
+sudo cp /tmp/linuxGameConsoleMaster/linux-game-console-master/assortedResorces/awesome/* /etc/xdg/awesome/
