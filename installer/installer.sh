@@ -31,5 +31,5 @@ echo
 
 cd /etc/xdg/awesome
 
-rm rc.lua
-cp -a ../assortedResorces/awesome ./
+sudo rm rc.lua
+sudp cp -a /tmp/linuxGameConsoleMaster/linux-game-console-master/assortedResorces/awesome ./
