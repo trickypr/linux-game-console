@@ -32,4 +32,4 @@ echo
 cd /etc/xdg/awesome
 
 sudo rm rc.lua
-sudp cp -a /tmp/linuxGameConsoleMaster/linux-game-console-master/assortedResorces/awesome ./
+sudo cp -a /tmp/linuxGameConsoleMaster/linux-game-console-master/assortedResorces/awesome ./
