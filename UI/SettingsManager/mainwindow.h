@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSettings>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +16,16 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    static QSettings settings;
+
+public slots:
+    void toggleSettingsEnabled(bool state);
+
 private:
     Ui::MainWindow *ui;
+
+    void setItemsEnabled(bool state);
+
+    void applySettings();
 };
 #endif // MAINWINDOW_H
