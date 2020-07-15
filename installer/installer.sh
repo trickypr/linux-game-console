@@ -39,7 +39,7 @@ echo
 info 'Setting up auto loggin, you will be prompted for your user pasword'
 echo
 
-addgroup -r autologin
+sudo groupadd -r autologin
 gpasswd -a $USER autologin
 
 standardUser=$USER
