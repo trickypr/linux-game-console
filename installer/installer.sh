@@ -42,8 +42,8 @@ echo
 groupadd -r autologin
 gpasswd -a $USER autologin
 
-sudo echo '[Seat:*]' >> /etc/lightdm/lightdm.config
-sudo echo 'autologin-user=$USER' >> /etc/lightdm/lightdm.config
+sudo echo '[Seat:*]' >> /etc/lightdm/lightdm.conf
+sudo echo 'autologin-user=$USER' >> /etc/lightdm/lightdm.conf
 
 info 'Rebooting'
 echo
