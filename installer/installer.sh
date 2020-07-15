@@ -39,8 +39,10 @@ echo
 info 'Setting up auto loggin, you will be prompted for your user pasword'
 echo
 
-groupadd -r autologin
+addgroup -r autologin
 gpasswd -a $USER autologin
 
-sudo echo '[Seat:*]' >> /etc/lightdm/lightdm.conf
-sudo echo 'autologin-user=$USER' >> /etc/lightdm/lightdm.conf
+standardUser=$USER
+
+sudo bash -c "echo '[Seat:*]' >> /etc/lightdm/lightdm.conf"
+sudo bash -c "echo 'autologin-user=$standardUser' >> /etc/lightdm/lightdm.conf"
