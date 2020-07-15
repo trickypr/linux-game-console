@@ -31,3 +31,21 @@ echo
 
 sudo rm /etc/xdg/awesome/rc.lua
 sudo cp /tmp/linuxGameConsoleMaster/linux-game-console-master/assortedResorces/awesome/* /etc/xdg/awesome/
+
+echo
+echo
+echo
+
+info 'Setting up auto loggin, you will be prompted for your user pasword'
+echo
+
+groupadd -r autologin
+gpasswd -a $USER autologin
+
+sudo echo '[Seat:*]' >> /etc/lightdm/lightdm.config
+sudo echo 'autologin-user=$USER' >> /etc/lightdm/lightdm.config
+
+info 'Rebooting'
+echo
+
+sudo reboot
