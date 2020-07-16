@@ -20,17 +20,20 @@ SOURCES += \
     desktopapps.cpp \
     main.cpp \
     mainwindow.cpp \
+    managedesktop.cpp \
     wmconfig.cpp
 
 HEADERS += \
     autostartadd.h \
     desktopapps.h \
     mainwindow.h \
+    managedesktop.h \
     wmconfig.h
 
 FORMS += \
     autostartadd.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    managedesktop.ui
 
 TRANSLATIONS += \
     SettingsManager_en_AU.ts

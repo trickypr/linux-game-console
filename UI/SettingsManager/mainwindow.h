@@ -25,6 +25,14 @@ public slots:
     void addAutoApp(QString app);
     void removeAppClick();
 
+    void desktopAddDialog();
+    void desktopEditDialog();
+    void removeDesktop();
+    void applyDesktop(QString name, int index);
+
+    void applyButton();
+    void okButton();
+
 private:
     Ui::MainWindow *ui;
 
