@@ -19,7 +19,7 @@ echo
 
 info 'Updating apt'
 sudo apt update 
-sudo apt install -y awesome lightdm qterminal mate-polkit thunar
+sudo apt install -y awesome lightdm qterminal mate-polkit thunar papirus-icon-theme
 
 echo
 echo
