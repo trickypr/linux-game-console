@@ -21,6 +21,10 @@ public:
 public slots:
     void toggleSettingsEnabled(bool state);
 
+    void addAppClick();
+    void addAutoApp(QString app);
+    void removeAppClick();
+
 private:
     Ui::MainWindow *ui;
 
