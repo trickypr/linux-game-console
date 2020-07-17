@@ -10,10 +10,7 @@ string qStringToStr(QString orig)
     return orig.toLocal8Bit().data();
 }
 
-WMConfig::WMConfig()
-{
-
-}
+WMConfig::WMConfig() {}
 
 void WMConfig::applySettings(QString modKey, QStringList autoStartApps)
 {

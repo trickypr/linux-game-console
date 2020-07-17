@@ -248,5 +248,4 @@ void MainWindow::applySettings()
 
         WMConfig::applySettings(modKeyValue, apps);
     }
-
 }
