@@ -12,7 +12,7 @@ class ManageDesktop : public QDialog
     Q_OBJECT
 
 public:
-    explicit ManageDesktop(QWidget *parent);
+    explicit ManageDesktop(QWidget *parent = nullptr);
     ~ManageDesktop();
 
     void setDesktopIndex(int index);

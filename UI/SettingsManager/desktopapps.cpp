@@ -1,14 +1,15 @@
 #include <string>
 #include <iostream>
-#include <filesystem>
 
 #include <QStringList>
 #include <QDebug>
 
+#include <ghc/filesystem.hpp>
+
 #include "desktopapps.h"
 
 using namespace std;
-namespace fs = filesystem;
+namespace fs = ghc::filesystem;
 
 string getFileName(fs::path path, bool withExtention = false)
 {
