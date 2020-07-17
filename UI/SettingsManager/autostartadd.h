@@ -12,7 +12,7 @@ class AutoStartAdd : public QDialog
     Q_OBJECT
 
 public:
-    explicit AutoStartAdd(QWidget *parent = nullptr);
+    explicit AutoStartAdd(QWidget *parent);
     ~AutoStartAdd();
 
 public slots:
