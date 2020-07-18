@@ -42,6 +42,7 @@ info 'Installing system apps'
 sudo rm /bin/GameConsoleSettings /usr/share/applications/GCSettings.desktop
 sudo mv /tmp/SettingsManager-x86_64 /bin/GameConsoleSettings
 sudo cp /tmp/linuxGameConsoleMaster/linux-game-console-master/assortedResorces/desktopFiles/GCSettings.desktop /usr/share/applications/GCSettings.desktop
+sudo chmod +x /bin/GameConsoleSettings
 
 echo
 echo
