@@ -12,12 +12,15 @@ string qStringToStr(QString orig)
 
 WMConfig::WMConfig() {}
 
-void WMConfig::applySettings(QString modKey, QStringList autoStartApps)
+void WMConfig::applySettings(QString modKey, QStringList autoStartApps, QStringList screens)
 {
     string autoStart = "";
-
     for (QString app : autoStartApps)
         autoStart = autoStart + "\"" + app.toStdString() + "\",";
+
+    string configScreens = "";
+    for (QString screen : screens)
+        configScreens = configScreens + "\"" + screen.toStdString() + "\",";
 
     string fileContents =
             "-- This file has been overriden by the settings app. Do not edit \n"
@@ -26,10 +29,7 @@ void WMConfig::applySettings(QString modKey, QStringList autoStartApps)
             ""
             "config.modkey = \"" + qStringToStr(modKey) + "\"\n"
             ""
-            "-- The available desktops"
-            "config.screens = {"
-            "  \"Main\","
-            "} \n"
+            "config.screens = {" + configScreens + "} \n"
             ""
             "config.autoStart = {" + autoStart + "}\n"
             ""

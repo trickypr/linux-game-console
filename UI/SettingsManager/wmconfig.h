@@ -10,7 +10,7 @@ public:
 
     static QStringList keys;
 
-    static void applySettings(QString modKey, QStringList autoStartApps);
+    static void applySettings(QString modKey, QStringList autoStartApps, QStringList screens);
 };
 
 #endif // WMCONFIG_H

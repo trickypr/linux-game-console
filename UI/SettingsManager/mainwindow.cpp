@@ -245,6 +245,7 @@ void MainWindow::applySettings()
     {
         QComboBox* modKey            = findChild<QComboBox*>("modKeyCombo");
         QListWidget* autoStartApps   = findChild<QListWidget*>("listWidgetAutoStart");
+        QListWidget* desktops        = findChild<QListWidget*>("desktops");
 
         QString modKeyValue = modKey->currentText();
         settings.setValue("wm/modkey", modKeyValue);
@@ -254,6 +255,11 @@ void MainWindow::applySettings()
             apps << app->text();
         settings.setValue("wm/autostart", apps);
 
-        WMConfig::applySettings(modKeyValue, apps);
+        QStringList screens = {};
+        for (QListWidgetItem* desktop : desktops->findItems("*", Qt::MatchWildcard))
+            screens << desktop->text();
+        settings.setValue("wm/desktops", screens);
+
+        WMConfig::applySettings(modKeyValue, apps, screens);
     }
 }
