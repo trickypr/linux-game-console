@@ -54,6 +54,8 @@ echo
 sudo rm /etc/xdg/awesome/rc.lua
 sudo cp /tmp/linuxGameConsoleMaster/linux-game-console-master/assortedResorces/awesome/* /etc/xdg/awesome/
 
+sudo chmod 777 /etc/xdg/awesome/config.lua
+
 echo
 echo
 echo
