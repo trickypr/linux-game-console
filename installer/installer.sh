@@ -32,16 +32,15 @@ cd /tmp
 rm SettingsManager-x86_64
 
 # Download files
-$settingsDownload=$(
+wget $(
   curl https://api.github.com/repos/trickypr/linux-game-console/releases/latest |
   jq '.assets | .[] | select(.name=="SettingsManager-x86_64") | .browser_download_url' 
-)
-wget $settingsDownload
+) -o /tmp/SettingsManager-x86_64
 
 echo
 info 'Installing system apps'
 sudo rm /bin/GameConsoleSettings /usr/share/applications/GCSettings.desktop
-sudo mv ./SettingsManager-x86_64 /bin/GameConsoleSettings
+sudo mv /tmp/SettingsManager-x86_64 /bin/GameConsoleSettings
 sudo cp /tmp/linuxGameConsoleMaster/linux-game-console-master/assortedResorces/GCSettings.desktop /usr/share/applications/GCSettings.desktop
 
 echo
