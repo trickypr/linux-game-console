@@ -45,6 +45,8 @@ MainWindow::MainWindow(QWidget *parent)
     QPushButton* addDesktop      = findChild<QPushButton*>("desktopAdd");
     QPushButton* editDesktop     = findChild<QPushButton*>("desktopEdit");
     QPushButton* removeDesktop   = findChild<QPushButton*>("desktopRemove");
+    QPushButton* applySettings   = findChild<QPushButton*>("pushButton_apply");
+    QPushButton* okSettings      = findChild<QPushButton*>("pushButton_save");
 
     // Load data to the checkbox
     editableToggle->setChecked(settings.value("wm/autoconfig", false).toBool());
@@ -82,6 +84,12 @@ MainWindow::MainWindow(QWidget *parent)
             this, &MainWindow::desktopEditDialog);
     connect(removeDesktop, &QPushButton::clicked,
             this, &MainWindow::removeDesktop);
+
+    // Apply buttons
+    connect(applySettings, &QPushButton::clicked,
+            this, &MainWindow::applyButton);
+    connect(okSettings, &QPushButton::clicked,
+            this, &MainWindow::okButton);
 }
 
 MainWindow::~MainWindow()
