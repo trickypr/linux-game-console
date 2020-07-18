@@ -1,3 +1,5 @@
+-- This file may be overwrited by the settings manager
+
 local config = {}
 
 -- The main key used for system commands

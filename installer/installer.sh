@@ -61,7 +61,7 @@ echo
 echo
 echo
 
-info 'Setting up auto loggin, you will be prompted for your user pasword'
+info 'Setting up auto login, you will be prompted for your user password'
 echo
 
 sudo groupadd -r autologin

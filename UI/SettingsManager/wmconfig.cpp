@@ -20,18 +20,18 @@ void WMConfig::applySettings(QString modKey, QStringList autoStartApps)
         autoStart = autoStart + "\"" + app.toStdString() + "\",";
 
     string fileContents =
-            "local config = {}"
+            "-- This file has been overriden by the settings app. Do not edit \n"
             ""
-            "-- The main key used for system commands"
-            "config.modkey = \"" + qStringToStr(modKey) + "\""
+            "local config = {} \n"
+            ""
+            "config.modkey = \"" + qStringToStr(modKey) + "\"\n"
             ""
             "-- The available desktops"
             "config.screens = {"
             "  \"Main\","
-            "}"
+            "} \n"
             ""
-            "-- Autostart applications"
-            "config.autoStart = {" + autoStart + "}"
+            "config.autoStart = {" + autoStart + "}\n"
             ""
             "return config";
 
