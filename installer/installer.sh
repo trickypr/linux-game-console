@@ -35,7 +35,7 @@ rm SettingsManager-x86_64
 wget $(
   curl https://api.github.com/repos/trickypr/linux-game-console/releases/latest |
   jq -r '.assets | .[] | select(.name=="SettingsManager-x86_64") | .browser_download_url' 
-) -o /tmp/SettingsManager-x86_64
+)
 
 echo
 info 'Installing system apps'
