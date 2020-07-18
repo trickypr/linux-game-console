@@ -19,7 +19,30 @@ echo
 
 info 'Updating apt'
 sudo apt update 
-sudo apt install -y awesome lightdm qterminal mate-polkit thunar papirus-icon-theme
+sudo apt install -y awesome lightdm qterminal mate-polkit thunar papirus-icon-theme jq
+
+echo
+echo
+echo
+
+info 'Downloading system apps'
+cd /tmp
+
+# Clean up download files
+rm SettingsManager-x86_64
+
+# Download files
+$settingsDownload=$(
+  curl https://api.github.com/repos/trickypr/linux-game-console/releases/latest |
+  jq '.assets | .[] | select(.name=="SettingsManager-x86_64") | .browser_download_url' 
+)
+wget $settingsDownload
+
+echo
+info 'Installing system apps'
+sudo rm /bin/GameConsoleSettings /usr/share/applications/GCSettings.desktop
+sudo mv ./SettingsManager-x86_64 /bin/GameConsoleSettings
+sudo cp /tmp/linuxGameConsoleMaster/linux-game-console-master/assortedResorces/GCSettings.desktop /usr/share/applications/GCSettings.desktop
 
 echo
 echo
